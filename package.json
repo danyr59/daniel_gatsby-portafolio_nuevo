@@ -1,0 +1,23 @@
+{
+  "name": "daniel",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "keywords": [
+    "portafolio web, gatsby"
+  ],
+  "author": "Daniel Alejandro Rangel Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "gatsby": "^4.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
