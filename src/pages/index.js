@@ -1,8 +1,11 @@
 import * as React from "react"
+import Layout from '../component/layout'
 
 const pageIndex = () => {
   return (
-    <div>hola mundo </div>
+    <Layout>
+      <div>hola mundo </div>
+    </Layout>
   )
 }
 
