@@ -1,5 +1,5 @@
 import * as React from "react"
-import Layout from '../component/layout'
+import Layout from '../component/layouts/main'
 
 const pageIndex = () => {
   return (
