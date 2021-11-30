@@ -5,6 +5,11 @@ const pageIndex = () => {
   return (
     <Layout>
       <div>hola mundo </div>
+      <div>hola mundo </div>
+      <div>hola mundo </div>
+      <div>hola mundo </div>
+      <div>hola mundo </div>
+      <div>hola mundo </div>
     </Layout>
   )
 }
