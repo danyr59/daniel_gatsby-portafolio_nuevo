@@ -39,18 +39,16 @@ const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) =
       </LinkChakra>
     </Link>)
     :
-    (<chakra.a display="flex" flex={flex} flexGrow={flexGrow}  href={href} >
-      <LinkChakra
-        p={2}
-        color={active ? '#202023' : inactiveColor}
-        _target={_target}
+    (<LinkChakra display="flex" flex={flex} flexGrow={flexGrow} href={href}
+      p={2}
+      color={active ? '#202023' : inactiveColor}
+      _target={_target}
 
-        {...props}
-      >
-        {children}
+      {...props}
+    >
+      {children}
 
-      </LinkChakra>
-    </chakra.a>)
+    </LinkChakra>)
 
 
   return render
@@ -108,7 +106,7 @@ const Navbar = props => {
             Contact
           </LinkItem>
 
-          <LinkItem ml={4} href={"/static/7540b8e05dc2eca10bfbb37ea70f4813/curriculum.pdf"} target="_blank">Resume</LinkItem>
+          <LinkItem as="button" variant='outline' ml={4} href={"/static/7540b8e05dc2eca10bfbb37ea70f4813/curriculum.pdf"} target="_blank">Resume</LinkItem>
         </Stack>
 
         <Box flexShrink={{ md: 1 }} flexGrow={{ base: 1, md: 0 }} mx={4} display="flex" justifyContent="right" alignItems="center" >

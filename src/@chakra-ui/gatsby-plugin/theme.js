@@ -4,7 +4,7 @@ import { mode } from '@chakra-ui/theme-tools'
 const styles = {
   global: props => ({
     body: {
-      bg: mode('#ffa420', '#202023')(props)
+      bg: mode('#ffa420', '#202023')(props),
     }
   })
 }
@@ -28,7 +28,12 @@ const components = {
       color: mode('#3d7aed', '#ff63c3')(props),
       textUnderlineOffset: 3
     })
-  }
+  },
+  // Divider: {
+  //   defaultProps: {
+  //     colorScheme: 'blue',
+  //   },
+  // }
 }
 
 const fonts = {

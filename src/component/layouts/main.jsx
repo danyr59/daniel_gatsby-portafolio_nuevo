@@ -22,6 +22,7 @@ import {
 import { useLocation } from '@reach/router';
 import { Container, Box } from "@chakra-ui/react"
 import NavBarLeft from "../navBarLeft"
+import NavBarRight from "../navBarRight"
 const Layout = ({ children }) => {
   const path = useLocation()
   return (
@@ -40,13 +41,14 @@ const Layout = ({ children }) => {
         {/* <meta property="og:site_name" content="Takuya Matsuyama's Homepage" /> */}
         {/* <meta property="og:type" content="website" /> */}
         {/* <meta property="og:image" content="/card.png" /> */}
-        <title>daniel Alejandro Rangel Sanchez | developer</title>
+        <title>Daniel Alejandro Rangel Sanchez | Developer</title>
       </head>
       <Navbar zIndex={5} path={path.pathname} />
       <Container mt={3} zIndex={1} maxW="container.md" >
         {children}
       </Container>
       <NavBarLeft zIndex={2} />
+      <NavBarRight zIndex={1} />
       {/* <div className={sideLeft}> */}
       {/*   <ul style={{ listStyle: "none" }}> */}
       {/*     <li > */}
