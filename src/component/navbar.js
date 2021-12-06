@@ -29,8 +29,8 @@ const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) =
     (<Link to={href}  >
       <LinkChakra
         p={2}
-        bg={active ? 'grassTeal' : undefined}
-        color={active ? '#202023' : inactiveColor}
+        // bg={active ? 'grassTeal' : undefined}
+        // color={active ? '#202023' : inactiveColor}
 
         {...props}
       >
@@ -41,7 +41,7 @@ const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) =
     :
     (<LinkChakra display="flex" flex={flex} flexGrow={flexGrow} href={href}
       p={2}
-      color={active ? '#202023' : inactiveColor}
+      // color={active ? '#202023' : inactiveColor}
       _target={_target}
 
       {...props}

@@ -5,8 +5,13 @@ const styles = {
   global: props => ({
     body: {
       bg: mode('#ffa420', '#202023')(props),
+      borderColor: mode("gray.800", "whiteAlpha.900")(props)
+    },
+    '*, *::before, &::after': {
+      borderColor: "transparent",
+      wordWrap: 'break-word',
     }
-  })
+  }),
 }
 
 const components = {
@@ -25,15 +30,15 @@ const components = {
   },
   Link: {
     baseStyle: props => ({
-      color: mode('#3d7aed', '#ff63c3')(props),
+      color: mode('gray.800', 'whiteAlpha.900')(props),
       textUnderlineOffset: 3
     })
   },
-  // Divider: {
-  //   defaultProps: {
-  //     colorScheme: 'blue',
-  //   },
-  // }
+  Divider: {
+    baseStyle: (props) => ({
+      bg: mode("gray.800", "whiteAlpha.900")(props)
+    })
+  }
 }
 
 const fonts = {
@@ -44,11 +49,21 @@ const fonts = {
 const colors = {
   grassTeal: '#88ccca'
 }
+const layerStyles = {
+  nonBackground: {
+    ':hover': {
+      bg: "transparent"
+    }
+  }
+}
+
 
 const config = {
   initialColorMode: 'dark',
   useSystemColorMode: true
 }
 
-const theme = extendTheme({ config, styles, components, fonts, colors })
+const theme = extendTheme({
+  config, layerStyles, styles, components, fonts, colors
+})
 export default theme

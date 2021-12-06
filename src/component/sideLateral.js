@@ -4,7 +4,7 @@ import { Box, useColorModeValue, Center, Divider, Stack } from "@chakra-ui/react
 
 
 const SideLateral = ({ left, bottom, right, top, children, ...props }) => {
-
+  // colorScheme="blue"
 
   return (
     <Box
@@ -31,7 +31,7 @@ const SideLateral = ({ left, bottom, right, top, children, ...props }) => {
       >
         {children}
         <Center height="90px">
-          <Divider colorScheme="blue" orientation="vertical" />
+          <Divider orientation="vertical" />
         </Center>
       </Stack>
     </Box>);
