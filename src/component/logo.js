@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from 'gatsby'
 import { StaticImage } from "gatsby-plugin-image"
-import { Text, useColorModeValue } from "@chakra-ui/react"
+import { Text } from "@chakra-ui/react"
 import styled from "@emotion/styled"
 
 const LogoBox = styled.span`

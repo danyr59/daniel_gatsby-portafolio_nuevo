@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, useColorModeValue, Center, Divider, Stack } from "@chakra-ui/react"
+import { Box, Center, Divider, Stack } from "@chakra-ui/react"
 
 
 

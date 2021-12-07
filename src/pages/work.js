@@ -1,9 +1,12 @@
 import * as React from "react"
+import Main from "../component/layouts/main"
 
 
 const Work = () => {
   return (
-    <div> hola</div>
+    <Main title="Work">
+      <div> hola</div>
+    </Main>
   )
 }
 

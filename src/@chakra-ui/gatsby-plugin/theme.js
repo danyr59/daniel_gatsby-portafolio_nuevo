@@ -1,5 +1,7 @@
 import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
+import "@fontsource/jetbrains-mono"
+// import { Fonts } from "./fonts"
 
 const styles = {
   global: props => ({
@@ -10,7 +12,8 @@ const styles = {
     '*, *::before, &::after': {
       borderColor: "transparent",
       wordWrap: 'break-word',
-    }
+    },
+
   }),
 }
 
@@ -43,7 +46,8 @@ const components = {
 
 const fonts = {
   heading: "'M PLUS Rounded 1c'",
-  body: "'JetBrains Mono'"
+  body: "'JetBrains Mono'",
+
 }
 
 const colors = {

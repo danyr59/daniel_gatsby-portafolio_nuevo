@@ -1,5 +1,5 @@
 import React from "react"
-import { IconButton, Icon, extendTheme } from "@chakra-ui/react"
+import { IconButton, Icon } from "@chakra-ui/react"
 import { LinkItem } from "../component/navbar.js"
 import SideLateral from "./sideLateral"
 import { FiLinkedin, FiInstagram, FiGithub, FiTwitter } from "react-icons/fi"
@@ -37,8 +37,6 @@ const Icons = ({ aria, href, icon, _id, ...props }) => {
           {...props}
           w="1.2em"
           h="1.2em"
-
-          colorSchema="teal"
           as={icon}
         />}
 

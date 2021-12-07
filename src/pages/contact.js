@@ -1,9 +1,11 @@
 import * as React from "react"
-
+import Main from "../component/layouts/main"
 
 const Contact = () => {
   return (
-    <div> hola</div>
+    <Main title="Contact">
+      <div> hola</div>
+    </Main>
   )
 }
 

@@ -28,6 +28,6 @@ module.exports = {
         path: `${__dirname}/curriculum`,
       }
     },
-
+  `gatsby-plugin-react-helmet`
   ],
 };

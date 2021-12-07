@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link } from 'gatsby'
-import { StaticImage } from "gatsby-plugin-image"
 import Logo from "./logo"
 import ThemeToggleButton from "./theme-toggle-button.js"
 import {
@@ -15,14 +14,13 @@ import {
   MenuList,
   MenuButton,
   IconButton,
-  chakra,
   useColorModeValue
 } from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
 
 const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
+  // const active = path === href
+  // const inactiveColor = useColorModeValue('gray200', 'whiteAlpha.900')
 
   const render = (href && path)
     ?
