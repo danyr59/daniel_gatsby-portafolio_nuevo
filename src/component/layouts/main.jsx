@@ -33,14 +33,14 @@ const Main = ({ children, title }) => {
         {/* <meta property="og:image" content="/card.png" /> */}
       </Helmet>
       <Navbar zIndex={5} path={path.pathname} />
-      <Container mt={3} zIndex={1} maxW="container.md" >
+      <Container mt={3} zIndex={1} p={{ base: 2, xs: 4, md: 6, lg: 8 }} maxW={{ md: "container.md", lg: "57em" }}>
         <Layout title={title}>
           {children}
         </Layout>
       </Container>
       <NavBarLeft zIndex={2} />
       <NavBarRight zIndex={1} />
-    </Box>
+    </Box >
   )
 }
 

@@ -1,18 +1,21 @@
 import { extendTheme } from '@chakra-ui/react'
 import { mode } from '@chakra-ui/theme-tools'
 import "@fontsource/jetbrains-mono"
+// import "@fontsource/inter"
 // import { Fonts } from "./fonts"
 
 const styles = {
   global: props => ({
     body: {
       bg: mode('#ffa420', '#202023')(props),
-      borderColor: mode("gray.800", "whiteAlpha.900")(props)
+      borderColor: mode("gray.800", "whiteAlpha.900")(props),
+      fontSize: { base: "12px", sm: "15px", md: "16px" }
     },
     '*, *::before, &::after': {
       borderColor: "transparent",
       wordWrap: 'break-word',
     },
+    //colocar clase imagen
 
   }),
 }
@@ -28,6 +31,15 @@ const components = {
         textDecorationThickness: 4,
         marginTop: 3,
         marginBottom: 4
+      },
+      "title-bio": {
+        fontFamily: "Inter",
+        textUnderlineOffset: 6,
+        textDecorationColor: '#525252',
+        textDecorationThickness: 4,
+        marginTop: 3,
+        marginBottom: 4
+
       }
     }
   },
