@@ -1,23 +1,29 @@
 import React from "react"
 import Layout from '../component/layouts/main'
-import { Center, Text, Heading, Container, Box, useColorModeValue as ColorModeValue, chakra, Button, } from "@chakra-ui/react"
+import {
+  Center,
+  Text,
+  Heading,
+  Container,
+  Box,
+  useColorModeValue as ColorModeValue,
+  chakra,
+  Button,
+  List,
+  ListItem,
+  ListIcon,
+  Grid,
+  Divider,
+} from "@chakra-ui/react"
+import { ChevronRightIcon } from "@chakra-ui/icons"
 import { StaticImage } from "gatsby-plugin-image"
 import Section from "../component/section"
 import Paragraph from "../component/paragraph"
 import { BioSection, BioYear } from "../component/bio.js"
 import { Link } from "gatsby"
+import Certifications from "../component/certifications"
 
-const Image = () => {
-  return (
-    <div>
-      <StaticImage
-        src="../images/self.jpeg"
-        alt="Profile image"
-      />
-    </div>
-  )
-}
-const ImageGatsby = chakra(Image)
+
 
 const pageIndex = () => {
   return (
@@ -75,21 +81,59 @@ const pageIndex = () => {
 
         <Section mt={20} delay={0.5}>
           <Heading as="h3" variant="section-title">
-            Work
+            About Me
           </Heading>
           <Paragraph>
-            Daniel is a 4th semester student at the University of the Andes located in Merida, Venezuela. I work as a freelance, at the moment I like to create my own projects, in order to obtain more experience in the field, I have more than a year working with both React technologies on the client side, as well as with backend technologies such as nodejs, express .js and mongojs. In order to meet the needs of the full-stack market.
+            Hello! My name is Daniel and I enjoy creating things that live on the Internet. My interest in web development began in 2020 when I decided to try to learn web development on my own, in the middle of the COVID-19 pandemic, it turns out that I liked everything related to the subject, so I decided to take my first leap and learn about HTML and CSS!<br /><br />
           </Paragraph>
-          <Center>
-            <Link to="/work">
-              <Button
-                size="lg"
-                variant="outline"
-                m={6}>
-                View my Work
-              </Button>
-            </Link>
-          </Center>
+          <Paragraph>
+            I learned quickly, being able to develop projects, where I learned a lot about React, as well as backend technologies<br /><br />
+          </Paragraph>
+          <Paragraph>
+            Being a Systems Engineering student and in view of the fact that thanks to the pandemic, we are all at home, I decided to dive deeply into web development, since I had the basis, I knew how to program beforehand in languages like C, C ++, which I learned by The beginning of 2019 when I started my career at the university, thus knowing strong foundations in programming such as object-oriented (OPP).<br /><br />
+          </Paragraph>
+          <Paragraph>
+            Here are some technologies that I have been working with recently:
+          </Paragraph>
+          <Grid mt={9} templateColumns='repeat(3, 1fr)' justifyItems="center" >
+            <List justifySelf="end" spacing={3}>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                JavaScript (ES6+)
+              </ListItem>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                React
+              </ListItem>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                Gatsby
+              </ListItem>
+            </List>
+
+            <List spacing={3}>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                Node.js
+              </ListItem>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                Express.js
+              </ListItem>
+
+            </List>
+
+            <List justifySelf="start" spacing={3}>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                MongoDB
+              </ListItem>
+              <ListItem>
+                <ListIcon as={ChevronRightIcon} />
+                Mongoose.js
+              </ListItem>
+            </List>
+          </Grid>
         </Section>
 
         <Section mt={20} delay={0.2}>
@@ -116,6 +160,51 @@ const pageIndex = () => {
           </BioSection>
 
         </Section>
+
+        <Section mt={20} delay={0.5}>
+          <Heading as="h3" variant="section-title">
+            Work
+          </Heading>
+          <Paragraph>
+            Daniel is a 4th semester student at the University of the Andes located in Merida, Venezuela. I work as a freelance, at the moment I like to create my own projects, in order to obtain more experience in the field, I have more than a year working with both React technologies on the client side, as well as with backend technologies such as nodejs, express .js and mongojs. In order to meet the needs of the full-stack market.
+          </Paragraph>
+          <Center>
+            <Link to="/work">
+              <Button
+                size="lg"
+                variant="outline"
+                m={6}>
+                View my Work
+              </Button>
+            </Link>
+          </Center>
+        </Section>
+
+        <Section mt={20} delay={0.5}>
+          <Heading as="h3" variant="section-title">
+            Certifications
+          </Heading>
+          <List spacing={3}>
+            <ListItem display="flex">
+              <Certifications title="Back End Development and APIs" caducidad="Nov 2021" />
+            </ListItem>
+            <ListItem display="flex">
+              <Certifications title="Front End Libraries" caducidad="Jul 2021" />
+            </ListItem>
+            <ListItem display="flex">
+              <Certifications title="JavaScript Algorithms and Data Structures" caducidad="Abr 2021" />
+            </ListItem>
+            <ListItem display="flex">
+              <Certifications title="Responsive Web Design" caducidad="Ene 2021" />
+            </ListItem>
+
+
+          </List>
+
+        </Section>
+
+
+
 
       </Container>
     </Layout >
