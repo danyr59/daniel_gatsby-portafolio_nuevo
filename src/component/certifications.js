@@ -23,7 +23,7 @@ const Certifications = ({ title, caducidad, credential }) => {
           <StatLabel>FreeCodeCamp</StatLabel>
           <StatLabel>{`Issued: ${caducidad} - No expiration date`}</StatLabel>
           <chakra.a opacity={0.8} fontSize="sm" href={`https://www.freecodecamp.org/certification/danyr58/${title.toLowerCase().replace(/ /g, "-")}`}>
-            Ver Credential
+            see credential
           </chakra.a>
           <Divider mt={3} orientation="horizontal" />
 
