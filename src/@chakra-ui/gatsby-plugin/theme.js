@@ -15,6 +15,10 @@ const styles = {
       borderColor: "transparent",
       wordWrap: 'break-word',
     },
+    // ".grid-item-thumbnail": {
+    //   borderRadius: "12px"
+    // },
+
     //colocar clase imagen
 
   }),
@@ -53,7 +57,7 @@ const components = {
     baseStyle: (props) => ({
       bg: mode("gray.800", "whiteAlpha.900")(props)
     })
-  }
+  },
 }
 
 const fonts = {

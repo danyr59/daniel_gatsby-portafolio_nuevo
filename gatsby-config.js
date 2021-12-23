@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    `gatsby-transformer-sharp`,
     {
       resolve: "@chakra-ui/gatsby-plugin",
       options: {
@@ -25,9 +26,10 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `curriculum`,
-        path: `${__dirname}/curriculum`,
+        path: `${__dirname}/works`,
       }
     },
-  `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-mdx`
   ],
 };

@@ -1,5 +1,5 @@
 import React from "react"
-import Layout from '../component/layouts/main'
+import Main from '../component/layouts/main'
 import {
   Center,
   Text,
@@ -27,7 +27,7 @@ import Certifications from "../component/certifications"
 
 const pageIndex = () => {
   return (
-    <Layout title="Homepage">
+    <Main title="Homepage">
       <Container w="100%" mt={8} maxW="auto">
         <Box mt={2} mb={2}>
           <Text >Hi my name is</Text>
@@ -207,7 +207,7 @@ const pageIndex = () => {
 
 
       </Container>
-    </Layout >
+    </Main>
   )
 }
 
