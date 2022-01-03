@@ -3,21 +3,18 @@ import { graphql, Link as GatsbyLink } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Container, Image, Icon, useColorModeValue, Box, Heading, Link } from "@chakra-ui/react"
 import Main from "../../component/layouts/main"
-import { Global } from "@emotion/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 
 // import { GridItemStyle } from "../../component/grid-item"
 
-const Works = ({ data }) => {
-
+const Works = ({ data, ...props }) => {
   const color = useColorModeValue("yellow.600", "teal.900")
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
     <Main title={data.mdx.frontmatter.title}>
       {/* <GridItemStyle /> */}
       <Container
-      // className="hola"
       >
 
         <Box as="div" mb={9} >
@@ -71,18 +68,5 @@ export const query = graphql`
   }
         `
 
-
-export const ImageSombreado = () => (
-  <Global
-    styles={`
-      .sombreado-item{
-        border-radius: 12px;
-      }
-      .hola{
-        box-shadow: -15px 15px 10px red;
-      }
-    `}
-  />
-)
 
 export default Works 

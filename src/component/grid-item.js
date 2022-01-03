@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, LinkBox, LinkOverlay, Text, Image } from "@chakra-ui/react"
-import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Global } from "@emotion/react"
 import { Link } from "gatsby"
 

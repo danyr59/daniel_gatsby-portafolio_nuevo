@@ -13,7 +13,8 @@ import {
   ListItem,
   ListIcon,
   Grid,
-  Divider,
+  GridItem,
+  keyframes,
 } from "@chakra-ui/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import { StaticImage } from "gatsby-plugin-image"
@@ -23,16 +24,47 @@ import { BioSection, BioYear } from "../component/bio.js"
 import { Link } from "gatsby"
 import Certifications from "../component/certifications"
 
+const typingHidden = keyframes`
+  from {
+    width: 0;
+    visibility: visible;
+  }
+  to{
+  visibility: visible;
+  }
+`
+
+const typing = keyframes`
+  from { width: 0}
+`
+const blink = keyframes`
+  50% { border-color: transparent }
+`
+const endBlink = keyframes`
+  to {
+    border-right: 0px
+  }
+`
 
 
 const pageIndex = () => {
   return (
     <Main title="Homepage">
       <Container w="100%" mt={8} maxW="auto">
-        <Box mt={2} mb={2}>
+        <Box mt={2} mb={2} width="100%">
           <Text >Hi my name is</Text>
-          <Heading as="h1" mt={2} fontSize={{ base: "30px", md: "40px", lg: "80px" }} fontWeight="1000" fontFamily="'JetBrains Mono'">
-            Daniel Alejandro Rangel Sanchez
+          <Heading
+            fontSize={{ base: "20px", sm: "40px", md: "60px", lg: "80px" }}
+            width="100%"
+
+            as="h1"
+            mt={2}
+            p={1}
+            fontWeight="1000"
+            fontFamily="'JetBrains Mono'"
+          >
+            <Text lineHeight="1.2" whiteSpace="nowrap" overflow="hidden" borderRight="4px solid" w="100%" display="inline-block" animation={`${typing} 2s steps(16) .4s , ${endBlink} 0s 2s forwards`}>Daniel Alejandro</Text>
+            <Text boxSizing="border-box" lineHeight="1.2" whiteSpace="nowrap" overflow="hidden" borderRight="4px solid" w="14ch" display="block" visibility="hidden" animation={`${typingHidden} 2s steps(14) 2s forwards, ${blink} .5s infinite step-end 2s alternate`}>Rangel Sanchez</Text>
           </Heading>
         </Box>
 
@@ -95,44 +127,49 @@ const pageIndex = () => {
           <Paragraph>
             Here are some technologies that I have been working with recently:
           </Paragraph>
-          <Grid mt={9} templateColumns='repeat(3, 1fr)' justifyItems="center" >
-            <List justifySelf="end" spacing={3}>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                JavaScript (ES6+)
-              </ListItem>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                React
-              </ListItem>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                Gatsby
-              </ListItem>
-            </List>
+          <Grid mt={9} alignItems="center" gridTemplateColumns='repeat(auto-fill, minmax(250px, 1fr))'  gap={2}  >
+            <GridItem >
+              <List >
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  JavaScript (ES6+)
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  React
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  Gatsby
+                </ListItem>
+              </List>
+            </GridItem>
 
-            <List spacing={3}>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                Node.js
-              </ListItem>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                Express.js
-              </ListItem>
+            <GridItem >
+              <List >
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  Node.js
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  Express.js
+                </ListItem>
+              </List>
+            </GridItem>
 
-            </List>
-
-            <List justifySelf="start" spacing={3}>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                MongoDB
-              </ListItem>
-              <ListItem>
-                <ListIcon as={ChevronRightIcon} />
-                Mongoose.js
-              </ListItem>
-            </List>
+            <GridItem >
+              <List >
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  MongoDB
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={ChevronRightIcon} />
+                  Mongoose.js
+                </ListItem>
+              </List>
+            </GridItem>
           </Grid>
         </Section>
 
@@ -197,8 +234,6 @@ const pageIndex = () => {
             <ListItem display="flex">
               <Certifications title="Responsive Web Design" caducidad="Ene 2021" />
             </ListItem>
-
-
           </List>
 
         </Section>
@@ -207,7 +242,7 @@ const pageIndex = () => {
 
 
       </Container>
-    </Main>
+    </Main >
   )
 }
 

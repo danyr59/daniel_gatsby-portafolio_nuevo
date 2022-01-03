@@ -17,6 +17,7 @@ import {
   useColorModeValue
 } from "@chakra-ui/react"
 import { HamburgerIcon } from '@chakra-ui/icons'
+import PDF from "../../curriculum/curriculum.pdf"
 
 const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) => {
   // const active = path === href
@@ -24,9 +25,11 @@ const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) =
 
   const render = (href && path)
     ?
-    (<Link to={href}  >
+    (
       <LinkChakra
+        as={Link}
         p={2}
+        to={href}
         // bg={active ? 'grassTeal' : undefined}
         // color={active ? '#202023' : inactiveColor}
 
@@ -35,7 +38,7 @@ const LinkItem = ({ href, path, _target, children, flex, flexGrow, ...props }) =
         {children}
 
       </LinkChakra>
-    </Link>)
+    )
     :
     (<LinkChakra display="flex" flex={flex} flexGrow={flexGrow} href={href}
       p={2}
@@ -91,12 +94,13 @@ const Navbar = props => {
           alignItems="center"
           justifyContent="right"
           flexGrow={1}
+          mr={5}
           mt={{ base: 4, md: 0 }}
 
         >
-          <LinkItem href="/about" path={path}>
-            About
-          </LinkItem>
+          {/* <LinkItem href="/about" path={path}> */}
+          {/*   About */}
+          {/* </LinkItem> */}
           <LinkItem href="/work" path={path}>
             Work
           </LinkItem>
@@ -104,7 +108,7 @@ const Navbar = props => {
             Contact
           </LinkItem>
 
-          <LinkItem as="button" variant='outline' ml={4} href={"/static/7540b8e05dc2eca10bfbb37ea70f4813/curriculum.pdf"} target="_blank">Resume</LinkItem>
+          <LinkItem variant='outline' ml={4} href={PDF} target="_blank">Resume</LinkItem>
         </Stack>
 
         <Box flexShrink={{ md: 1 }} flexGrow={{ base: 1, md: 0 }} mx={4} display="flex" justifyContent="right" alignItems="center" >
@@ -121,14 +125,17 @@ const Navbar = props => {
                 aria-label="options"
               />
               <MenuList display="inline-flex" flexDirection="column" alignItems="flex-end">
-                <Link to="/about">
-                  <MenuItem w="auto" as={LinkChakra} >About</MenuItem>
-                </Link>
+                {/* <Link to="/about"> */}
+                {/*   <MenuItem w="auto" as={LinkChakra} >About</MenuItem> */}
+                {/* </Link> */}
                 <Link to="/work">
                   <MenuItem w="auto" as={LinkChakra} >Work</MenuItem>
                 </Link>
                 <Link to="/contact">
                   <MenuItem w="auto" as={LinkChakra} >Contact</MenuItem>
+                </Link>
+                <Link as={LinkChakra} href={PDF} target="_blank">
+                  <MenuItem w="auto" >Resume</MenuItem>
                 </Link>
 
               </MenuList>
