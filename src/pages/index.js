@@ -217,26 +217,26 @@ const pageIndex = () => {
           </Center>
         </Section>
 
-        <Section mt={20} delay={0.5}>
-          <Heading as="h3" variant="section-title">
-            Certifications
-          </Heading>
-          <List spacing={3}>
-            <ListItem display="flex">
-              <Certifications title="Back End Development and APIs" caducidad="Nov 2021" />
-            </ListItem>
-            <ListItem display="flex">
-              <Certifications title="Front End Libraries" caducidad="Jul 2021" />
-            </ListItem>
-            <ListItem display="flex">
-              <Certifications title="JavaScript Algorithms and Data Structures" caducidad="Abr 2021" />
-            </ListItem>
-            <ListItem display="flex">
-              <Certifications title="Responsive Web Design" caducidad="Ene 2021" />
-            </ListItem>
-          </List>
+        {/* <Section mt={20} delay={0.5}> */}
+        {/*   <Heading as="h3" variant="section-title"> */}
+        {/*     Certifications */}
+        {/*   </Heading> */}
+        {/*   <List spacing={3}> */}
+        {/*     <ListItem display="flex"> */}
+        {/*       <Certifications title="Back End Development and APIs" caducidad="Nov 2021" /> */}
+        {/*     </ListItem> */}
+        {/*     <ListItem display="flex"> */}
+        {/*       <Certifications title="Front End Libraries" caducidad="Jul 2021" /> */}
+        {/*     </ListItem> */}
+        {/*     <ListItem display="flex"> */}
+        {/*       <Certifications title="JavaScript Algorithms and Data Structures" caducidad="Abr 2021" /> */}
+        {/*     </ListItem> */}
+        {/*     <ListItem display="flex"> */}
+        {/*       <Certifications title="Responsive Web Design" caducidad="Ene 2021" /> */}
+        {/*     </ListItem> */}
+        {/*   </List> */}
 
-        </Section>
+        {/* </Section> */}
 
 
 
