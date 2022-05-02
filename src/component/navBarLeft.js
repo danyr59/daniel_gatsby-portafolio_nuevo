@@ -15,7 +15,7 @@ import { FiLinkedin, FiInstagram, FiGithub, FiTwitter } from "react-icons/fi"
 // })
 
 
-export const Icons = ({ aria, href, icon, _id, ...props }) => {
+const Icons = ({ aria, href, icon, _id, ...props }) => {
   // console.log(extendTheme({}))
   return (
     <LinkItem

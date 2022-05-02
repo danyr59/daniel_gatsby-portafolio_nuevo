@@ -1,12 +1,12 @@
 import * as React from "react"
 import Main from "../component/layouts/main"
 
-const Contact = () => {
+const About = () => {
   return (
-    <Main title="Contact">
+    <Main title="About">
       <div> hola</div>
     </Main>
   )
 }
 
-export default Contact 
+export default About 

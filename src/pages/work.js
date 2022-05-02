@@ -37,7 +37,7 @@ export default Work
 export const query = graphql`
 
   query {
-   allMdx(sort: {order: DESC, fields: frontmatter___hero_priority}) {
+   allMdx {
      nodes {
        id
         slug
@@ -49,9 +49,6 @@ export const query = graphql`
               gatsbyImageData
             }
           }
-         hero_link_project_deploy
-         hero_link_project_repository
-         hero_tech_stack
          hero_image_description
         }
       }
