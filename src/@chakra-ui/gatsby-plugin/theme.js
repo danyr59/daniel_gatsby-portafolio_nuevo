@@ -44,6 +44,13 @@ const components = {
         marginTop: 3,
         marginBottom: 4
 
+      },
+      "title-h1": {
+        // backgroundImage: "linear-gradient(349deg,#ff00a1,#ffb027)",
+        fontWeight: "600",
+        // backgroundClip: "text",
+        fontFamily: "Basier Circle, sans-serif",
+        whiteSpace: "nowrap"
       }
     }
   },
