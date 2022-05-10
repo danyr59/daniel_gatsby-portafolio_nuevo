@@ -127,7 +127,7 @@ const pageIndex = () => {
           <Paragraph>
             Here are some technologies that I have been working with recently:
           </Paragraph>
-          <Grid mt={9} alignItems="center" gridTemplateColumns='repeat(auto-fill, minmax(250px, 1fr))'  gap={2}  >
+          <Grid mt={9} alignItems="center" gridTemplateColumns='repeat(auto-fill, minmax(250px, 1fr))' gap={2}  >
             <GridItem >
               <List >
                 <ListItem>
@@ -217,26 +217,26 @@ const pageIndex = () => {
           </Center>
         </Section>
 
-        {/* <Section mt={20} delay={0.5}> */}
-        {/*   <Heading as="h3" variant="section-title"> */}
-        {/*     Certifications */}
-        {/*   </Heading> */}
-        {/*   <List spacing={3}> */}
-        {/*     <ListItem display="flex"> */}
-        {/*       <Certifications title="Back End Development and APIs" caducidad="Nov 2021" /> */}
-        {/*     </ListItem> */}
-        {/*     <ListItem display="flex"> */}
-        {/*       <Certifications title="Front End Libraries" caducidad="Jul 2021" /> */}
-        {/*     </ListItem> */}
-        {/*     <ListItem display="flex"> */}
-        {/*       <Certifications title="JavaScript Algorithms and Data Structures" caducidad="Abr 2021" /> */}
-        {/*     </ListItem> */}
-        {/*     <ListItem display="flex"> */}
-        {/*       <Certifications title="Responsive Web Design" caducidad="Ene 2021" /> */}
-        {/*     </ListItem> */}
-        {/*   </List> */}
+        <Section mt={20} delay={0.5}>
+          <Heading as="h3" variant="section-title">
+            Certifications
+          </Heading>
+          <List spacing={3}>
+            <ListItem display="flex">
+              <Certifications title="Back End Development and APIs" caducidad="Nov 2021" />
+            </ListItem>
+            <ListItem display="flex">
+              <Certifications title="Front End Libraries" caducidad="Jul 2021" />
+            </ListItem>
+            <ListItem display="flex">
+              <Certifications title="JavaScript Algorithms and Data Structures" caducidad="Abr 2021" />
+            </ListItem>
+            <ListItem display="flex">
+              <Certifications title="Responsive Web Design" caducidad="Ene 2021" />
+            </ListItem>
+          </List>
 
-        {/* </Section> */}
+        </Section>
 
 
 

@@ -15,6 +15,18 @@ const styles = {
       borderColor: "transparent",
       wordWrap: 'break-word',
     },
+    "h2": {
+      borderRadius: "40px",
+      color: mode("gray.100", "blue")(props),
+      fontSize: 20,
+      marginBottom: "10px",
+    },
+    "p": {
+      margin: "5px",
+      marginBottom: "20px",
+      textAlign: "justify",
+      textIndent: "1em",
+    },
     // ".grid-item-thumbnail": {
     //   borderRadius: "12px"
     // },
