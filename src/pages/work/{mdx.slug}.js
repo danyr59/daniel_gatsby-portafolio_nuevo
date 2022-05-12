@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { graphql, Link as GatsbyLink } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Container, Image, Icon, useColorModeValue, Box, Heading, Link } from "@chakra-ui/react"
+import { Container, Image, Icon, useColorModeValue, Box, Heading, Link, chakra } from "@chakra-ui/react"
 import Main from "../../component/layouts/main"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import { MDXProvider } from "@mdx-js/react"
 import { ChevronRightIcon } from "@chakra-ui/icons"
 import Work from "../../component/work"
 
@@ -16,6 +17,29 @@ const Works = ({ data }) => {
   }
   const color = useColorModeValue("yellow.600", "teal.900")
   const image = getImage(data.mdx.frontmatter.hero_image)
+
+  const components = {
+    p: function pharafe(props) {
+      console.log(props)
+      return <chakra.p margin="5px"
+        marginBottom="20px"
+        textAlign="justify"
+        textIndent="1em"
+        {...props}
+
+      />;
+    },
+    h1: function pharafe(props) {
+      console.log(props)
+      return <chakra.h1
+        borderRadius="40px"
+        fontSize="20"
+        marginBottom="10px"
+        {...props}
+      />;
+    },
+
+  }
   return (
     <Main title={data.mdx.frontmatter.title}>
       {/* <GridItemStyle /> */}
@@ -51,13 +75,26 @@ const Works = ({ data }) => {
             </Link>
           </Heading>
         </Box>
-        <Box
-          id="childMdx"
-          mt={5}
-          as={MDXRenderer}
-        >
-          {data.mdx.body}
-        </Box>
+        <Work
+          labels={{
+            'website': { text: "https://danyr59.github.io/portafolio", link: "https://danyr59.github.io/portafolio/" },
+            'plataform': "Linux",
+            'stack': "HTML CSS",
+            'blogpost': { text: "How i've attractive the first pisd users for my sass thsat cost ", link: "https://www.dany.com/es" }
+          }}
+          text="hola como estan todos ustedes"
+        />
+
+        <MDXProvider components={components}>
+          <Box
+            id="childMdx"
+            mt={5}
+            as={MDXRenderer}
+          >
+            {data.mdx.body}
+          </Box>
+        </MDXProvider>
+
         {/* <Work labels={labels} text="hola como estan todos ustedes"> */}
         {/* </Work> */}
       </Container>
@@ -71,13 +108,13 @@ export const query = graphql`
           frontmatter {
           hero_image_alt
           hero_link_project_deploy
-          hero_link_project_repository
-          hero_tech_stack
-          title
-          hero_image {
-            childImageSharp {
-            gatsbyImageData
-          }
+        hero_link_project_repository
+        hero_tech_stack
+        title
+        hero_image {
+          childImageSharp {
+          gatsbyImageData
+        }
         }
       }
         body

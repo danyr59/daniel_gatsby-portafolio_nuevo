@@ -15,19 +15,19 @@ const styles = {
       borderColor: "transparent",
       wordWrap: 'break-word',
     },
-    "h2": {
-      borderRadius: "40px",
-      color: mode("gray.100", "blue")(props),
-      fontSize: 20,
-      marginBottom: "10px",
-    },
-    "p": {
-      margin: "5px",
-      marginBottom: "20px",
-      textAlign: "justify",
-      textIndent: "1em",
-    },
-    // ".grid-item-thumbnail": {
+    // "h2": {
+    //   borderRadius: "40px",
+    //   color: mode("gray.100", "blue")(props),
+    //   fontSize: 20,
+    //   marginBottom: "10px",
+    // },
+    // "p": {
+    //   margin: "5px",
+    //   marginBottom: "20px",
+    //   textAlign: "justify",
+    //   textIndent: "1em",
+    // },
+    // // ".grid-item-thumbnail": {
     //   borderRadius: "12px"
     // },
 
@@ -96,6 +96,17 @@ const layerStyles = {
   }
 }
 
+const works = {
+  textStyles: {
+    h1: {
+      borderRadius: "40px",
+      // color: mode("gray.100", "blue")(props),
+      fontSize: 20,
+      marginBottom: "10px",
+    }
+  }
+}
+
 
 const config = {
   initialColorMode: 'dark',
@@ -103,6 +114,6 @@ const config = {
 }
 
 const theme = extendTheme({
-  config, layerStyles, styles, components, fonts, colors
+  config, layerStyles, styles, components, fonts, colors, works
 })
 export default theme
