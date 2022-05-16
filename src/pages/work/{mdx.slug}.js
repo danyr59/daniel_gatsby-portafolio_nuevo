@@ -20,20 +20,20 @@ const Works = ({ data }) => {
 
   const components = {
     p: function pharafe(props) {
-      console.log(props)
       return <chakra.p margin="5px"
         marginBottom="20px"
         textAlign="justify"
-        textIndent="1em"
+        css={{ textIndent: "1em" }}
+
         {...props}
 
       />;
     },
     h1: function pharafe(props) {
-      console.log(props)
       return <chakra.h1
         borderRadius="40px"
         fontSize="20"
+        marginTop="20px"
         marginBottom="10px"
         {...props}
       />;
@@ -77,12 +77,12 @@ const Works = ({ data }) => {
         </Box>
         <Work
           labels={{
-            'website': { text: "https://danyr59.github.io/portafolio", link: "https://danyr59.github.io/portafolio/" },
-            'plataform': "Linux",
-            'stack': "HTML CSS",
-            'blogpost': { text: "How i've attractive the first pisd users for my sass thsat cost ", link: "https://www.dany.com/es" }
+            website: { text: data.mdx.frontmatter.hero_link_project_deploy, link: data.mdx.frontmatter.hero_link_project_deploy },
+            plataform: data.mdx.frontmatter.hero_tech_plataform,
+            stack: data.mdx.frontmatter.hero_tech_stack,
+            blogpost: { text: data.mdx.frontmatter.hero_tech_blogpost, link: data.mdx.frontmatter.hero_tech_blogpost_link }
           }}
-          text="hola como estan todos ustedes"
+          text={data.mdx.frontmatter.hero_tech_text}
         />
 
         <MDXProvider components={components}>
@@ -94,9 +94,6 @@ const Works = ({ data }) => {
             {data.mdx.body}
           </Box>
         </MDXProvider>
-
-        {/* <Work labels={labels} text="hola como estan todos ustedes"> */}
-        {/* </Work> */}
       </Container>
     </Main>
   )
@@ -106,20 +103,24 @@ export const query = graphql`
         query MyQuery($id: String) {
           mdx(id: {eq: $id}) {
           frontmatter {
-          hero_image_alt
-          hero_link_project_deploy
-        hero_link_project_repository
-        hero_tech_stack
-        title
-        hero_image {
-          childImageSharp {
-          gatsbyImageData
-        }
-        }
-      }
-        body
+            hero_image_alt
+            hero_link_project_deploy
+            hero_link_project_repository
+            hero_tech_stack
+            hero_tech_plataform 
+            hero_tech_blogpost
+            hero_tech_blogpost_link
+            hero_tech_text
+            title
+            hero_image {
+                childImageSharp {
+                  gatsbyImageData
+                }
+            }
+          }
+          body
+       }
     }
-  }
         `
 
 

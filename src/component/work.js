@@ -5,7 +5,7 @@ import { Container, Text } from "@chakra-ui/react"
 const Work = ({ labels, children, text }) => {
   return (
     <Container >
-      <Text>{text}</Text>
+      <Text m="10px">{text}</Text>
       <Tags labels={labels} />
       {children}
     </Container>
