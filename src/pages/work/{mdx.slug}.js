@@ -80,7 +80,8 @@ const Works = ({ data }) => {
             website: { text: data.mdx.frontmatter.hero_link_project_deploy, link: data.mdx.frontmatter.hero_link_project_deploy },
             plataform: data.mdx.frontmatter.hero_tech_plataform,
             stack: data.mdx.frontmatter.hero_tech_stack,
-            blogpost: { text: data.mdx.frontmatter.hero_tech_blogpost, link: data.mdx.frontmatter.hero_tech_blogpost_link }
+            blogpost: { text: data.mdx.frontmatter.hero_tech_blogpost, link: data.mdx.frontmatter.hero_tech_blogpost_link },
+            repository: { text: data.mdx.frontmatter.hero_link_project_repository, link: data.mdx.frontmatter.hero_link_project_repository },
           }}
           text={data.mdx.frontmatter.hero_tech_text}
         />

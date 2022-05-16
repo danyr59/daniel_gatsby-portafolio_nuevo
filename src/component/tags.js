@@ -9,7 +9,7 @@ const Tags = ({ labels }) => {
       <SimpleGrid>
         {keys ? keys.map(key => {
           return (
-            ["website", "blogpost"].includes(key) ?
+            ["website", "blogpost", "repository"].includes(key) ?
               labels[key].text != "" ? <Box><Text><Badge fontWeight="bold" variant="solid" colorScheme="green" mr="3">{key.toUpperCase()}</Badge><Link href={labels[key].link} target="_blank">{labels[key].text}</Link></Text></Box> : " " :
               labels[key] != "" ? <Box><Text><Badge fontWeight="bold" variant="solid" colorScheme="green" mr="3">{key.toUpperCase()}</Badge>{labels[key]}</Text></Box> : " "
           )
