@@ -6,6 +6,7 @@ import Section from "../component/section.js"
 import { GridItem } from "../component/grid-item.js"
 
 const Work = ({ data }) => {
+  data.allMdx.nodes.map((node) => console.log(node))
   return (
     <Main title="Work">
       {/* <Container> */}
@@ -19,12 +20,6 @@ const Work = ({ data }) => {
           </Section>
         ))
         }
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
-        <Box bg="tomato" height="80px"></Box>
 
       </SimpleGrid>
       {/* </Container> */}
