@@ -17,7 +17,6 @@ const SideLateral = ({ left, bottom, right, top, children, ...props }) => {
       justifyContent="end"
       justifyItems="flex-end"
       w="auto"
-      h="100%"
       css={{ writingMode: "vertical-rl" }}
       {...props}
     >
