@@ -1,4 +1,5 @@
 module.exports = {
+ pathPrefix: "/daniel_gatsby-portafolio_nuevo",
   siteMetadata: {
     siteUrl: "https://yourdomain.com",
     title: "Daniel Rangel ",

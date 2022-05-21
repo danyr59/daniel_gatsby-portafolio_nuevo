@@ -1,16 +1,17 @@
 {
   "name": "daniel",
+  "homepage": "https://danyr59.github.io",
   "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "keywords": [
     "portafolio web, gatsby"
