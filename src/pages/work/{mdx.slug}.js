@@ -9,12 +9,7 @@ import { ChevronRightIcon } from "@chakra-ui/icons"
 import Work from "../../component/work"
 
 const Works = ({ data }) => {
-  const labels = {
-    website: { text: "link", link: "https://www.dany.com/es" },
-    plataform: "Linux",
-    stack: "Stack",
-    blogpost: { text: "How i've attractive the first pisd users for my sass thsat cost ", link: "https://www.dany.com/es" }
-  }
+
   const color = useColorModeValue("yellow.600", "teal.900")
   const image = getImage(data.mdx.frontmatter.hero_image)
 
@@ -38,6 +33,32 @@ const Works = ({ data }) => {
         {...props}
       />;
     },
+    img: function foto(props) {
+      if (data === null)
+        return ""
+      //separate chain ./namefile
+      const nameFile = props.src.substring(2)
+      let images = data.mdx.frontmatter.others.filter(image => {
+        return image.childImageSharp.gatsbyImageData.images.fallback.src.includes(nameFile)
+      })
+      let image = getImage(...images)
+
+      return (<Image
+        as={GatsbyImage}
+        image={image}
+        borderRadius={10}
+        _hover={{
+          boxShadow: "0 0 0"
+        }}
+        color={color}
+        borderWidth="2px"
+        borderColor="black"
+        borderStyle="solid"
+        boxShadow="-16px 16px 5px"
+        alt={data.mdx.frontmatter.hero_image_alt}
+      />)
+
+    }
 
   }
   return (
@@ -86,7 +107,7 @@ const Works = ({ data }) => {
           text={data.mdx.frontmatter.hero_tech_text}
         />
 
-        <MDXProvider components={components}>
+        <MDXProvider disableParentContext={true} components={components}>
           <Box
             id="childMdx"
             mt={5}
@@ -117,6 +138,11 @@ export const query = graphql`
                 childImageSharp {
                   gatsbyImageData
                 }
+            }
+            others {
+              childImageSharp {
+                gatsbyImageData
+              }
             }
           }
           body
