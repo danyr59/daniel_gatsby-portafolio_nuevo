@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql, Link as GatsbyLink } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Container, Image, Icon, useColorModeValue, Box, Heading, Link, chakra } from "@chakra-ui/react"
+import { Container, Image, Icon, useColorModeValue, Box, Heading, Link/*, chakra*/, OrderedList, ListItem } from "@chakra-ui/react"
 import Main from "../../component/layouts/main"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
@@ -14,8 +14,8 @@ const Works = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image)
 
   const components = {
-    p: function pharafe(props) {
-      return <chakra.p margin="5px"
+    p: (props) => {
+      return <Box as="p" margin="5px"
         marginBottom="20px"
         textAlign="justify"
         css={{ textIndent: "1em" }}
@@ -24,10 +24,23 @@ const Works = ({ data }) => {
 
       />;
     },
-    h1: function pharafe(props) {
-      return <chakra.h1
+    h1: (props) => {
+      // console.log(props)
+      return <Heading
+        as="h1"
         borderRadius="40px"
         fontSize="20"
+        marginTop="20px"
+        marginBottom="10px"
+        {...props}
+      />;
+    },
+    h2: function pharafe(props) {
+      // console.log(props)
+      return <Heading
+        as="h2"
+        borderRadius="40px"
+        fontSize="18"
         marginTop="20px"
         marginBottom="10px"
         {...props}
@@ -58,8 +71,12 @@ const Works = ({ data }) => {
         alt={data.mdx.frontmatter.hero_image_alt}
       />)
 
-    }
+    },
+    ol: OrderedList,
+    li: (props) => {
+      return (<ListItem {...props} />)
 
+    }
   }
   return (
     <Main title={data.mdx.frontmatter.title}>
