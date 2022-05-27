@@ -17,25 +17,10 @@ Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
 ```
 $PROJECT_ROOT
-│   # Page files
-├── pages
 │   # React component files
-├── components
-│   # Non-react modules
-├── lib
-│   # Static files for images and 3d model file
-└── public
-```
-
-    
-
-### **Site.**
-
-Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-```shell
-# create a new Gatsby site using the minimal starter
-npm init gatsby
+├── src
+│   # files .mdx with contains all imformation over my works
+├── works
 ```
 
 ###  **Start developing.**
