@@ -77,7 +77,7 @@ const Works = ({ data }) => {
       return (<ListItem {...props} />)
 
     },
-    a: Link,
+    a: (props) => <Link target="_blank" {...props}/>,
     code: Code,
     em: chakra.em
 
