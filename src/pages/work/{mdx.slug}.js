@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { graphql, Link as GatsbyLink } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import {  Container, Image, Icon, useColorModeValue, Box, Heading, Link/*, chakra*/, OrderedList, ListItem } from "@chakra-ui/react"
+import { Container, Image, Icon, useColorModeValue, Box, Heading, Link, chakra, OrderedList, ListItem, Code } from "@chakra-ui/react"
 import Main from "../../component/layouts/main"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
@@ -77,7 +77,10 @@ const Works = ({ data }) => {
       return (<ListItem {...props} />)
 
     },
-    a: Link
+    a: Link,
+    code: Code,
+    em: chakra.em
+
   }
   return (
     <Main title={data.mdx.frontmatter.title}>
