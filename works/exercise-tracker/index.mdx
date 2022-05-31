@@ -15,6 +15,24 @@ hero_tech_text: "first web exercise-tracker"
 
 # [exercise-tracker ](https://danyr59.github.io/exercise-tracker/ "exercise-tracker") 
 
-first web portfolio, when I started in the world of web development
+Exercise tracker, backend side project.
 
-created with html css and a bit of js, I learned a lot with this project, how to interact with the dom, add events and more
+The application consists of creating users, and registering them in the database, in which mongoDB was used, from there a unique id was returned, as a hash, where the exercises that were added were tracked.
+
+And it was followed up on it, through the query:
+
+```
+GET /api/users/:_id/logs?[from][&to][&limit]
+
+```
+where :
+
+1. [ ] = optional
+
+2. from, to = dates (yyyy-mm-dd); limit = number
+
+built with backen side JS technologies like:
+
+1. Nodejs
+2.express
+3.mongoose
