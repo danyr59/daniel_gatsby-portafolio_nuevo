@@ -12,7 +12,6 @@ const LogoBox = styled.span`
   height: 50px;
   line-height: 20px;
   margin: 10px;
-
   img {
     padding-right: 10px;
     transition: 200ms ease;
