@@ -1,8 +1,8 @@
 ---
 title: "microprocessor"
 hero_image: "./data-path.png"
-hero_image_alt: "microprocessor start went inicialize in the word the development Web"
-hero_image_description: "microprocessor start went inicialize in the word the development Web"
+hero_image_alt: "Simulation of Microprocessor with RISC-V architecture"
+hero_image_description: "Simulation of Microprocessor with RISC-V architecture"
 hero_priority: "36"
 hero_link_project_deploy: ""
 hero_link_project_repository: "https://github.com/kikeztw/microprocessor-arq-ula"
@@ -10,11 +10,27 @@ hero_tech_stack: "C++ SYSTEMC MAKE ASSEMBLY"
 hero_tech_plataform: "LINUX"
 hero_tech_blogpost: ""
 hero_tech_blogpost_link: ""
-hero_tech_text: "Simulation of Microprocessor riscv"
+hero_tech_text: "Implementation of each and every one of the components of the RISC-V data path."
 ---
 
-# [microprocessor ](https://danyr59.github.io/microprocessor/ "microprocessor") 
+# [Microprocessor](https://danyr59.github.io/microprocessor/ "microprocessor") 
 
-first web portfolio, when I started in the world of web development
+Final project of computer architecture, since I am a student of the Systems Engineering career, where I am currently studying fifth-semester subjects.
 
-created with html css and a bit of js, I learned a lot with this project, how to interact with the dom, add events and more
+This was a very interesting project as I learned how the computer works at a very low level.
+
+This project had to create the necessary stages for the execution of a Microprocessor, which uses a pipeline, and is divided into the following stages:
+
+1. Instruction fetch: this stage increased the program counter by 1 and checked if it took a jump, which was checked through a multiplexer, then 4 bytes of the instruction were obtained from the *L1 cache of instructions*, which is passed to routing records.
+
+2. Instruction decoding: this instruction was decoded and the *OPCODE* \(operation code\) were obtained, the operands *\(RS1, RS2, RD\)* that are passed to the register file which returns the corresponding value, and other codes such as func3, func7; the signed 32-bit extended immediate value, rs1 and rs2, is passed to the corresponding pipeline register.
+
+3. Execute Compute: in this stage the alu is executed, where depending on the OPCODE, and fun3 and func7 it performs a corresponding arithmetic operation.
+
+4.Access to memory: at this stage there is a gate which decides whether to take the jump or not, in the case of jumps such as the *jump* instruction, it also performs either the reading or writing of data in the data Cache L1.
+
+5. Write back: this stage decides whether to record the corresponding values corresponding in the log file.
+
+All the instructions are synchronized by clock, and in each stage certain gates or certain modules are turned on depending on the signals of each operation, which is achieved thanks to the control unit.
+
+This project was carried out in collaboration with 4 members of the group, their names are on github, collaborators section.
