@@ -118,6 +118,7 @@ const Works = ({ data }) => {
           </Heading>
         </Box>
         <Work
+          overflowX="hidden"
           labels={{
             website: { text: data.mdx.frontmatter.hero_link_project_deploy, link: data.mdx.frontmatter.hero_link_project_deploy },
             plataform: data.mdx.frontmatter.hero_tech_plataform,

@@ -2,9 +2,9 @@ import React from "react"
 import Tags from "./tags"
 import { Container, Text } from "@chakra-ui/react"
 
-const Work = ({ labels, children, text }) => {
+const Work = ({ labels, children, text , props}) => {
   return (
-    <Container >
+    <Container {...props} >
       <Text m="10px">{text}</Text>
       <Tags labels={labels} />
       {children}
