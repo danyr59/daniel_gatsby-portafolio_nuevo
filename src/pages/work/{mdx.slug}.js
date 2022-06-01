@@ -78,7 +78,7 @@ const Works = ({ data }) => {
 
     },
     a: (props) => <Link target="_blank" {...props} />,
-    code: (props) => <Code w="100%" {...props} />,
+    code: (props) => <Code w="100%" overflow="auto" {...props} />,
     em: chakra.em
 
   }
