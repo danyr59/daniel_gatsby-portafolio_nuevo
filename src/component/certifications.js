@@ -17,7 +17,7 @@ const Certifications = ({ title, caducidad, credential }) => {
       <Box pl={3} >
         <StaticImage width={100} src="../images/logofreecodecamp.png" />
       </Box>
-      <StatGroup pl={9}>
+      <StatGroup pl={9} w="100%">
         <Stat>
           <Heading as="h4" size="md">{title}</Heading>
           <StatLabel>FreeCodeCamp</StatLabel>
