@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <Main title="Contact">
       <Container>
-        <Heading as="h1" variant="title-h1">
+        <Heading as="h1" variant="title-h1" whiteSpace="normal">
           Let's start an awesome project!
         </Heading>
         <Container>
