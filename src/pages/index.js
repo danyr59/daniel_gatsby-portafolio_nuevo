@@ -222,16 +222,16 @@ const pageIndex = () => {
             Certifications
           </Heading>
           <List spacing={3} display="flex" flexWrap="wrap" flexDirection="row">
-            <ListItem display="flex" flexDirection="column" width="100%">
+            <ListItem display="flex" flexDirection="row" width="100%">
               <Certifications title="Back End Development and APIs" caducidad="Nov 2021" />
             </ListItem>
-            <ListItem display="flex" flexDirection="column" width="100%">
+            <ListItem display="flex" flexDirection="row" width="100%">
               <Certifications title="Front End Libraries" caducidad="Jul 2021" />
             </ListItem>
-            <ListItem display="flex" flexDirection="column" width="100%">
+            <ListItem display="flex" flexDirection="row" width="100%">
               <Certifications title="JavaScript Algorithms and Data Structures" caducidad="Abr 2021" />
             </ListItem>
-            <ListItem display="flex" flexDirection="column" width="100%">
+            <ListItem display="flex" flexDirection="row" width="100%">
               <Certifications title="Responsive Web Design" caducidad="Ene 2021" />
             </ListItem>
           </List>
