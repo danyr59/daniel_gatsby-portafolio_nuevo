@@ -221,7 +221,7 @@ const pageIndex = () => {
           <Heading as="h3" variant="section-title">
             Certifications
           </Heading>
-          <List spacing={3}>
+          <List spacing={3} >
             <ListItem display="flex">
               <Certifications title="Back End Development and APIs" caducidad="Nov 2021" />
             </ListItem>
