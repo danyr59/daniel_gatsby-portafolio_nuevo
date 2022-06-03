@@ -77,6 +77,11 @@ const components = {
       bg: mode("gray.800", "whiteAlpha.900")(props)
     })
   },
+  Input: {
+    baseStyle: (props) => ({
+      _placeholder: { color: mode("gray.100", "whiteAlpha.200")(props) }
+    })
+  }
 }
 
 const fonts = {
