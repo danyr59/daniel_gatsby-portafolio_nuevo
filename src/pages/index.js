@@ -240,7 +240,7 @@ const pageIndex = () => {
         </Section>
 
         <Section id="contact" mt={20} delay={0.5} display="flex" flexDirection="column" alignItems="center" >
-          <Heading as="h3" variant="section-title">
+          <Heading alignSelf="start" as="h3" variant="section-title">
             Contact
           </Heading>
 
