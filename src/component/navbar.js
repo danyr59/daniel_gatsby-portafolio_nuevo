@@ -104,8 +104,8 @@ const Navbar = props => {
           <LinkItem href="/work" path={path}>
             Work
           </LinkItem>
-          <LinkItem href="/contact" path={path}>
-            Contact
+          <LinkItem href="/" path={path}>
+            Home
           </LinkItem>
 
           <LinkItem variant='outline' ml={4} href={PDF} target="_blank">Resume</LinkItem>
