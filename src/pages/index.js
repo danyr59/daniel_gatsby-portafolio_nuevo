@@ -15,14 +15,16 @@ import {
   Grid,
   GridItem,
   keyframes,
+  Text,
 } from "@chakra-ui/react"
-import { ChevronRightIcon } from "@chakra-ui/icons"
+import { ChevronRightIcon, EmailIcon } from "@chakra-ui/icons"
 import { StaticImage } from "gatsby-plugin-image"
 import Section from "../component/section"
 import Paragraph from "../component/paragraph"
 import { BioSection, BioYear } from "../component/bio.js"
 import { Link } from "gatsby"
 import Certifications from "../component/certifications"
+import { LinkItem } from "../component/navbar"
 
 const typingHidden = keyframes`
   from {
@@ -238,6 +240,31 @@ const pageIndex = () => {
 
         </Section>
 
+        <Section id="contact" mt={20} delay={0.5} display="flex" flexDirection="column" alignItems="center" >
+          <Heading as="h3" variant="section-title">
+            Contact
+          </Heading>
+
+          <Heading as="h4" >Press The Button</Heading>
+          <Box >
+            <Text padding="20px">
+              Tell me the needs and requirements of your project
+            </Text>
+          </Box>
+
+          <LinkItem
+            href="mailto:danyelrange58@gmail.com"
+            mb={3}
+          >
+            <Button
+              colorScheme="teal"
+              size="lg"
+            >
+              <EmailIcon />
+            </Button>
+          </LinkItem>
+
+        </Section>
 
 
 
