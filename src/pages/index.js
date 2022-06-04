@@ -15,7 +15,6 @@ import {
   Grid,
   GridItem,
   keyframes,
-  Text,
 } from "@chakra-ui/react"
 import { ChevronRightIcon, EmailIcon } from "@chakra-ui/icons"
 import { StaticImage } from "gatsby-plugin-image"
