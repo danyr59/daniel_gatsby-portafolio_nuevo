@@ -131,8 +131,8 @@ const Navbar = props => {
                 <Link to="/work">
                   <MenuItem w="auto" as={LinkChakra} >Work</MenuItem>
                 </Link>
-                <Link to="/contact">
-                  <MenuItem w="auto" as={LinkChakra} >Contact</MenuItem>
+                <Link to="/">
+                  <MenuItem w="auto" as={LinkChakra} >Home</MenuItem>
                 </Link>
                 <Link as={LinkChakra} href={PDF} target="_blank">
                   <MenuItem w="auto" >Resume</MenuItem>
