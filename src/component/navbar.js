@@ -104,6 +104,10 @@ const Navbar = props => {
           <LinkItem href="/work" path={path}>
             Work
           </LinkItem>
+          <LinkItem href="/#contact" path={path}>
+            Contact
+          </LinkItem>
+
           <LinkItem href="/" path={path}>
             Home
           </LinkItem>
@@ -130,6 +134,9 @@ const Navbar = props => {
                 {/* </Link> */}
                 <Link to="/work">
                   <MenuItem w="auto" as={LinkChakra} >Work</MenuItem>
+                </Link>
+                <Link to="/#contact">
+                  <MenuItem w="auto" as={LinkChakra} >Contact</MenuItem>
                 </Link>
                 <Link to="/">
                   <MenuItem w="auto" as={LinkChakra} >Home</MenuItem>
