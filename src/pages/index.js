@@ -192,10 +192,17 @@ const pageIndex = () => {
           </BioSection>
           <BioSection>
             <BioYear>
-              2020 to present
+              2020 to 2021
             </BioYear>
             Working on my own projects and learning every day, being self-taught
           </BioSection>
+          <BioSection>
+            <BioYear>
+              2022
+            </BioYear>
+            In mid-November 2021 I started the regular university semester again, after a long time due to the pandemic, which ended at the end of April 2022, I am currently in classes, which started at the beginning of June 2022, Parallel to this, I continue my learning, app creation, and other things of interest to me, both in web development, and in other areas to which I want to immerse myself.
+          </BioSection>
+
 
         </Section>
 
@@ -204,7 +211,7 @@ const pageIndex = () => {
             Work
           </Heading>
           <Paragraph>
-            Daniel is a 4th semester student at the University of the Andes located in Merida, Venezuela. I work as a freelance, at the moment I like to create my own projects, in order to obtain more experience in the field, I have more than a year working with both React technologies on the client side, as well as with backend technologies such as nodejs, express .js and mongojs. In order to meet the needs of the full-stack market.
+            Daniel is a 5th semester student at the University of the Andes located in Merida, Venezuela. I work as a freelance, at the moment I like to create my own projects, in order to obtain more experience in the field, I have more than a year working with both React technologies on the client side, as well as with backend technologies such as nodejs, express .js and mongojs. In order to meet the needs of the full-stack market.
           </Paragraph>
           <Center>
             <Link to="/work">
