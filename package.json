@@ -11,7 +11,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d public"
+    "deploy": "gh-pages -d public",
+    "nuevo": "hl"
   },
   "keywords": [
     "portafolio web, gatsby"
